@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Example of onSubmit Event Handler
+        </title>
+        <script type="text/javascript">
+            function thankUser(){
+                alert("Thank you " + document.myform.data.value + "!");
+            }
+        </script>
+    </head>
+    <body>
+            <h3>Example of onSubmit Event Handler</h3>
+            Type your name and press the button<br>
+            <form name="myform" onsubmit="thankUser()">
+                <input type="text" name="data">
+                <input type="submit" value="Submit this form">            
+            </form>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Rollover with Mouse Events</title>
+
+<script type="text/javascript">
+if (document.images) {
+    var image1 = new Image();
+    image1.src = "100_2440.jpg";
+
+    var image2 = new Image();
+    image2.src = "100_2408.jpg";
+}
+</script>
+</head>
+
+<body>
+<p>Move your mouse over the image to see the result</p>
+
+<a href="#"
+   onMouseOver="document.myImage.src=image2.src;"
+   onMouseOut="document.myImage.src=image1.src;">
+    <img name="myImage" src="100_2440.jpg">
+</a>
+
+</body>
+</html>

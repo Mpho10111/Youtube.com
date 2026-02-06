@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Checkboxes</title>
+    <script type="text/javascript">
+        function check() {
+            var coffee = document.forms[0].coffee;
+            var answer = document.forms[0].answer;
+            var selected = [];
+
+            for (var i = 0; i < coffee.length; i++) {
+                if (coffee[i].checked) {
+                    selected.push(coffee[i].value);
+                }
+            }
+
+            // Add "and" between the selected values
+            answer.value = "You ordered a coffee with " + selected.join(" and ");
+        }
+    </script>
+</head>
+
+<body>
+<form>
+    How would you like your coffee? <br/>
+    <input type="checkbox" name="coffee" value="cream"> with cream<br/>
+    <input type="checkbox" name="coffee" value="sugar"> with sugar<br/><br/>
+
+    <input type="text" name="answer" size="30"><br/><br/>
+    <input type="button" onclick="check()" value="Order">
+</form>
+</body>
+</html>

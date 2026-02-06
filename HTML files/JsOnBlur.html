@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function valid(form){
+                var input=Number(form.data.value);
+
+                if(input<0){
+                    alert("Please input a value that is less than 0")
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Example of onBlur Event Handler</h3>
+        Try inputting a value less than zero:<br>
+        <form name="myform">
+            <input type="text" name="data" value="" size="10" onblur="valid(this.form)">
+        </form>
+    </body>
+</html>

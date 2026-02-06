@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <title> JavaScript Prompt Pop up Box</title>
+</html>
+<body>
+    <script type=" text/javascript">
+        var person= prompt("Please enter your name", "Enter Name");
+        if (person==null || person == " "){
+            var response= "User cancelled the prompt.";
+        }
+        else{
+            var response = "Hello,  " + person + "! How are you today?";
+        }
+        document.write(response);
+    </script>
+</body>

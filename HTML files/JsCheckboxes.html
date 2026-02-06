@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> JavaScript Checkboxes</title>
+        <script type="text/javascript">
+            function check(){
+                coffee= document.forms[0].coffee
+                answer= document.forms[0].answer
+                txt= " "
+                for(i=0;i<coffee.length;i++){
+                    if (coffee[i].checked){
+                        txt=txt + coffee[i].value + " "
+                    }
+                }
+                answer.value= "You ordered a coffee with " + txt
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            How would you like your coffee? <br/>
+            <input type="checkbox" name="coffee" value="cream" />with cream<br/>
+            <input type="checkbox" name="coffee" value="sugar" />with sugar<br/>
+            <input type="text" name="answer" size="30"/>
+            <input type="button" name ="test" onclick="check()" value="Order" />
+        </form>
+    </body>
+    </body>
+</html>
